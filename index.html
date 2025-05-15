@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="FOOTER.css">
+<link rel="stylesheet" href="sidenavigation.css">
+<link rel="stylesheet" href="carousel.css">
+<link rel="stylesheet" href="Homepagecss.css">
+<style>
+body{
+width:90%;
+}
+.top-nav{
+ background-color: white;
+ / box-shadow: 2px 3px 3px;
+  margin-left:-7px;
+  margin-right:-10px;
+  height:70px;
+  z-index: 1;
+}
+.top{
+  width:100%;
+  list-style: none;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:15px;
+  margin-top:-8px;
+  padding-right: 2px;
+  z-index:1;
+}
+.top li{
+  padding-right: 10px;
+  margin-right:70px;
+  transform: translateY(-15px) translateX(200px)
+}
+.top a{
+  text-decoration: none;
+  color:;
+ font-size: 20px;
+  transition:0.4s ease;
+ // padding-left:5px;
+  padding-right:5px;
+  padding-top:5px;
+  padding-bottom:5px;
+  border-radius: 5px;
+ // border-bottom-width: 1px;
+ // border-bottom: 1px solid
+}
+.Logo{
+  transform:translateX(-580px)  translateY(10px);
+  font-size:20px;
+  color:whit;
+  font-family: ;
+  z-index: 1;
+}
+.bx-cart {
+  background-color:blueviolet;
+  padding:10px;
+  position: absolute;
+  border-radius: 50%;
+  font-size:30px;
+  transform: translateY(-80px) translateX(-541px);
+  color:black;
+  box-shadow: inset 2px 3px 5px;
+}
+.Login-btn, .Register-btn{
+  background-color: white;
+  color:blueviolet;
+  padding:10px;
+  border-radius: 10px;
+  width:110px;
+border:2px solid blueviolet;
+  transform: translateY(-113px) translateX(1080px);
+  font-size:17px;
+  font-weight:600;
+  font-family:sans-seriff;
+  transition: 0.5s ease;
+}
+.Login-btn::before{
+  content:"";
+  position: absolute;
+  inset:0;
+  display:inline-block;
+  background-color:blueviolet;
+  border-radius: 8px;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: -1;
+  transition: transform 0.4s;
+}
+.Login-btn:hover{
+  color:white;
+}
+.Login-btn:hover::before{
+  transform: scaleX(1);
+  transform-origin:left;
+}
+
+.Register-btn::before{
+  content:"";
+  position: absolute;
+  inset:0;
+  display:inline-block;
+  background-color:blueviolet;
+  border-radius: 8px;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: -1;
+  transition: transform 0.4s;
+}
+.Register-btn:hover{
+  color:white;
+}
+.Register-btn:hover::before{
+  transform: scaleX(1);
+  transform-origin:left;
+}
+.bxs-right-arrow-alt{
+  font-size:20px;
+  transform:translateY(4px)
+}
+
+</style>
+
+<style>
+.Searching{
+  margin-left:400px
+}
+
+#Search-bar{
+  height: 40px;
+  //border-radius: 20px;
+  border: 2px solid blueviolet;
+  margin-bottom: 25px;
+  transition:transform 0.4s ease;
+  width:400px;
+  margin-right:60px;
+  margin-top:40px;
+  text-decoration:none;
+  border-end-start-radius: 20px;
+  border-start-start-radius: 20px;
+ //transform-origin: left;
+  transition:0.5s ease;
+ 
+}
+
+
+#search-btn{
+  color:white;
+  background-color: blueviolet;
+  padding:15px;
+  margin-left:-65px;
+  transform:translateY(2px);
+  border-end-end-radius: 20px;
+  border-start-end-radius: 20px;
+}
+
+</style>
+
+
+<style>
+#icons{
+  display:flex;
+margin-left:7px;
+  margin-top:5px;
+  font-size: 28px;
+  background-color: white;
+   box-shadow: 1px 4px 4px;;
+ width:30px;
+  height:30px;
+  border-radius:50%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+  color:blueviolet;
+  border:1px solid black;
+  cursor:pointer;
+  box-shadow: 2px 2px 3px
+}
+.cont{
+  background-color:blueviolet;
+  width:100px;
+  height: 40px;
+  border-radius:20px;
+  border: 1px solid black;
+  box-shadow: 1px 3px 4px;
+  transform:translateX(1200px) translateY(-80px) scale(0.9);
+  box-shadow: inset 1px 2px 3px 1px;
+}
+
+</style>
+
+<style>
+
+.compass {
+	width: 400px;
+	height: 400px;
+	background-color: blueviolet;
+	border-radius: 100%;
+	background-image: -webkit-linear-gradient(top, #F7F7F7, #ECECEC);
+  position: relative;
+  margin: 0 auto;
+}
+
+.compass-inner {
+	width: 340px;
+	height: 340px;
+	background-color: white;
+	border-radius: 100%;
+	position: relative;
+	left: 27.5px;
+	top: 27.5px;
+	border: 10px solid #8A2BE2;
+  
+}
+
+.main-arrow {
+	height: 100%;
+	width: 30px;
+	left: 155px;
+	position: relative;
+	padding-top: 5px;
+	box-sizing:border-box;
+  transform: rotate(20deg);
+	animation: spin 2.0s alternate infinite;
+	-ms-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	-o-animation: spin 2.0s alternate infinite;
+	-moz-transform: rotate(20deg);
+	-moz-animation: spin 2.0s alternate infinite;
+	-webkit-transform: rotate(20deg);
+	-webkit-animation: spin 2.0s alternate infinite;
+	
+}
+
+.arrow-up {
+	width: 0; 
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 165px solid #8A2BE2;
+	position: relative;
+}
+
+.arrow-down {
+	-webkit-transform: rotate(180deg); /* Safari and Chrome */
+	width: 0; 
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 165px solid grey;
+	position: relative;
+}
+
+.north {
+	font-size: 36px;
+	font-family: 'Lobster Two', cursive;
+	color: #8A2BE2;
+	position: absolute;
+	left: 155px;
+	top: 10px;
+}
+
+.east {
+	font-size: 36px;
+	font-family: 'Lobster Two', cursive;
+	color: #8A2BE2;
+	position: absolute;
+	left: 290px;
+	top: 150px;
+}
+
+.west {
+	font-size: 36px;
+	font-family: 'Lobster Two', cursive;
+	color: #8A2BE2;
+	position: absolute;
+	left: 20px;
+	top: 150px;
+}
+
+.south {
+	font-size: 36px;
+	font-family: 'Lobster Two', cursive;
+	color: #8A2BE2;
+	position: absolute;
+	left: 155px;
+	top: 280px;
+}
+
+@keyframes spin {
+    0%{
+        transform:scale(1) rotate(0deg);
+    }
+	50% {
+		transform:scale(1) rotate(80deg);
+	}
+	100% {
+		transform:scale(1) rotate(-180deg);
+	}
+}
+
+@-o-keyframes spin {
+    0%{
+        -webkit-transform:scale(1) rotate(0deg);
+    }
+	50% {
+		-webkit-transform:scale(1) rotate(80deg);
+	}
+	100% {
+		-webkit-transform:scale(1) rotate(-180deg);
+	}
+}
+
+@-moz-keyframes spin {
+    0%{
+        -webkit-transform:scale(1) rotate(0deg);
+    }
+	50% {
+		-webkit-transform:scale(1) rotate(80deg);
+	}
+	100% {
+		-webkit-transform:scale(1) rotate(-180deg);
+	}
+}
+
+@-webkit-keyframes spin {
+    0%{
+        -webkit-transform:scale(1) rotate(0deg);
+    }
+	50% {
+		-webkit-transform:scale(1) rotate(80deg);
+	}
+	100% {
+		-webkit-transform:scale(1) rotate(-180deg);
+	}
+}
+
+@media (max-width: 600px) {
+  .compass {
+    width: 200px;
+	height: 200px;
+	text-align: center;
+  }
+  
+  .compass-inner {
+	  width: 170px;
+	  height: 170px;
+	  left: 13px;
+	  top: 13px;
+  }
+  
+  .main-arrow {
+	width: 30px;
+	left: 78px;
+	width: 15px;
+	padding-top: 3px;
+  }
+  
+  .arrow-up {
+	border-bottom: 82.5px solid #EF5052;
+	border-left: 7.5px solid transparent;
+	border-right: 7.5px solid transparent;
+  }
+  
+   .arrow-down {
+	border-bottom: 82.5px solid #F3F3F3;
+	border-left: 7.5px solid transparent;
+	border-right: 7.5px solid transparent;
+  }
+  
+  .north {
+	  left: 78px;
+	  top: 10px;
+	  font-size: 16px;
+  }
+  
+  .south {
+	  font-size: 16px;
+	  left: 78px;
+	  top: 140px;
+  }
+  
+  .east {
+	  font-size: 16px;
+	  top: 72.5px;
+	  left: 145px;
+  }
+  
+  .west {
+	  font-size: 16px;
+	  left: 10px;
+	  top: 72.5px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .compass {
+    width: 200px;
+	height: 200px;
+	text-align: center;
+  }
+  
+  .compass-inner {
+	  width: 170px;
+	  height: 170px;
+	  left: 13px;
+	  top: 13px;
+  }
+  
+  .main-arrow {
+	width: 30px;
+	left: 78px;
+	width: 15px;
+	padding-top: 3px;
+  }
+  
+  .arrow-up {
+	border-bottom: 82.5px solid #EF5052;
+	border-left: 7.5px solid transparent;
+	border-right: 7.5px solid transparent;
+  }
+  
+   .arrow-down {
+	border-bottom: 82.5px solid #F3F3F3;
+	border-left: 7.5px solid transparent;
+	border-right: 7.5px solid transparent;
+  }
+  
+  .north {
+	  left: 78px;
+	  top: 10px;
+	  font-size: 16px;
+  }
+  
+  .south {
+	  font-size: 16px;
+	  left: 78px;
+	  top: 140px;
+  }
+  
+  .east {
+	  font-size: 16px;
+	  top: 72.5px;
+	  left: 145px;
+  }
+  
+  .west {
+	  font-size: 16px;
+	  left: 10px;
+	  top: 72.5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .compass {
+    width: 200px;
+	height: 200px;
+	text-align: center;
+  }
+  
+  .compass-inner {
+	  width: 170px;
+	  height: 170px;
+	  left: 13px;
+	  top: 13px;
+  }
+  
+  .main-arrow {
+	width: 30px;
+	left: 78px;
+	width: 15px;
+	padding-top: 3px;
+  }
+  
+  .arrow-up {
+	border-bottom: 82.5px solid #EF5052;
+	border-left: 7.5px solid transparent;
+	border-right: 7.5px solid transparent;
+  }
+  
+   .arrow-down {
+	border-bottom: 82.5px solid #F3F3F3;
+	border-left: 7.5px solid transparent;
+	border-right: 7.5px solid transparent;
+  }
+  
+  .north {
+	  left: 78px;
+	  top: 10px;
+	  font-size: 16px;
+  }
+  
+  .south {
+	  font-size: 16px;
+	  left: 78px;
+	  top: 140px;
+  }
+  
+  .east {
+	  font-size: 16px;
+	  top: 72.5px;
+	  left: 145px;
+  }
+  
+  .west {
+	  font-size: 16px;
+	  left: 10px;
+	  top: 72.5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .compass {
+    width: 200px;
+	height: 200px;
+	text-align: center;
+  }
+  
+  .compass-inner {
+	  width: 170px;
+	  height: 170px;
+	  left: 13px;
+	  top: 13px;
+  }
+  
+  .main-arrow {
+	width: 30px;
+	left: 78px;
+	width: 15px;
+	padding-top: 3px;
+  }
+  
+  .arrow-up {
+	border-bottom: 82.5px solid #EF5052;
+	border-left: 7.5px solid transparent;
+	border-right: 7.5px solid transparent;
+  }
+  
+   .arrow-down {
+	border-bottom: 82.5px solid #F3F3F3;
+	border-left: 7.5px solid transparent;
+	border-right: 7.5px solid transparent;
+  }
+  
+  .north {
+	  left: 78px;
+	  top: 10px;
+	  font-size: 16px;
+  }
+  
+  .south {
+	  font-size: 16px;
+	  left: 78px;
+	  top: 140px;
+  }
+  
+  .east {
+	  font-size: 16px;
+	  top: 72.5px;
+	  left: 145px;
+  }
+  
+  .west {
+	  font-size: 16px;
+	  left: 10px;
+	  top: 72.5px;
+  }
+}
+</style>
+</head>
+
+
+
+
+
+
+<body>
+<div class="frame">
+<nav class="top-nav" id="topnav">
+<ul class="top">
+<li><p class="Logo">carti</p><br><p class="cart-icon"><i class="bx bx-cart"></i></p></li>
+<li class="hide"><a href="Home.html"></a>Home</li>
+<li class="hide"><a href="Cataloguepage.html"></a>Catalogue</li>
+</ul>
+<button class="Login-btn" id= "Loginbtn">Login<i class="bx bxs-right-arrow-alt"></i></button>
+<button class="Register-btn" id= "Registerbtn">Register<i class="bx bxs-right-arrow-alt"></i></button>
+
+</nav>
+
+<div class="menu-btn" id="menu" onclick="showSideBar()"><a href="#"></a><i class="bx bx-menu"></i>
+</div>
+
+<nav class="sidenav" id="sidebr">
+<ul class="nd-bar">
+<li class="x-btn" onclick="hideSideBar()" id="hide"><a href="#"><i class="bx bx-x"></i></li>
+<div class="dsd">
+<li id="home"><a href="textbox.html"></a>Home<i class="bx bx-home"></i></li>
+<li><a href="About.html"></a>About<i class="bx bx-group"></i></li>
+<li><a href="Contact.html"></a>Contact Us<i class="bx bx-phone"></i></li>
+<li><a href="Products.html"></a>Catalogue<i class="bx bx-shopping-bag"></i></li>
+<li><a href="Orders.html"></a>Orders<i class="bx bxs-cart"></i></li>
+<li><a href="#"></a>Socials<i class="bx bxl-meta"></i></li>
+</div>
+<ul class="social-icons">
+<li><i class="bx bxl-facebook"></i>
+<li><i class="bx bxl-twitter"></i>
+<li><i class="bx bxl-youtube"></i>
+<li><i class="bx bxl-instagram"></i>
+<li><i class="bx bxl-whatsapp"></i>
+</ul>
+</ul>
+</nav>
+
+
+<div class="Searching">
+<input type="text" id="Search-bar" placeholder="Search for products, name, brand...">
+<i class="bx bxs-search" id="search-btn"></i>
+</div>
+
+<div class="cont" id="containing">
+<i class="bx bx-sun" id="icons"></i>
+</div>
+
+
+<div class="box1">
+
+        <h1>30%</h1>
+        <p2>Off on all products. Discover all of our amazing deals available to you
+        </p2>
+        <button class="shop">Shop now</button>
+        <img src="Macbook.png" id="Macbook">
+
+    </div>
+
+    <h3>Why Shop With Us?</h3>
+
+<div class="box2">
+    <p3 id="one1">Get awesome products from your best brands</p3>
+    <img src="shopping bag.png" id="shoppingbag">
+<img src="bagcheckmark2.png" id="bagcheckmark">
+
+    <p5 id="one2">Supports Tecno, Infinix, Nokia, Iphone and more</p5>
+</div>
+
+<div class="box2">
+    <p3 id="two">Delivery to any location in the country</p3>
+
+    <div class="compass">
+<div class="compass-inner"><div class="north">N</div><div class="east">E</div><div class="west">W</div><div class="south">S</div><div class="main-arrow"><div class="arrow-up"></div><div class="arrow-down"></div></div></div>
+</div>
+
+    <p5 id="two2">We are never too far from our clients</p5>
+</div> 
+
+<div class="box2">
+    <p3 id="three">Guaranteed quality for all our elctronics. We always bring you top quality.</p3>
+    <img src="check.png" id="check">
+    <p5 id="three2">Offering you a year's warranty for returns.</p5>
+</div>
+<div class="box2" id="BOX2">
+    <p3 id="four">Recieve notifications or alerts of our best deals & new products</p3>
+    <img src="notification-bell-svgrepo-com.png" id="notificationbell">
+    <p5 id="four2">Messages will be sent via email. Subsribe to our newsletter to recieve alerts.</p5>
+    <button class="subscribe">Subscribe</button>
+</div>
+
+<button class="deals">Hot deals<img src="fire-svgrepo-com.png"></button>
+
+<div class="cont3" id="cont3">
+<div class="item-card" id="itemz1">
+    <img src="headset.png" id ="image1">
+    <p1>N15,530</p1>
+    <p6>Logitech H390 Wireless Headset </p6>
+    <button class="add-to-cart" id="add-tocart1">Add to cart<i class="bx bxs-cart"></i>
+    </div>
+
+    <div class="item-card" id="itemz2">
+        <img src="iPhone-11.png" id ="image2">
+        <p1>N795,050</p1>
+        <p6>iPhone 11 128GB </p6>
+        <button class="add-to-cart" id="add-tocart2">Add to cart<i class="bx bxs-cart"></i>
+        </div>
+
+        <div class="item-card" id="itemz3">
+            <img src="Airpods.png" id ="image3">
+            <p1>N10,490</p1>
+            <p6>Mini Tws Headset Wireless Earphones Bluetooth 5.0 </p6>
+            <button class="add-to-cart" id="add-tocart3">Add to cart<i class="bx bxs-cart"></i>
+            </div>
+
+</div>
+
+<div class="cont2" id="cont">
+            <div class="item-card" id="itemz4">
+                <img src="Inifinix hot 50 pro.jpg" id ="image4">
+                <p1>N210,190</p1>
+                <p6>Infinix Hot 50 Pro X6880 256 8 (Titanium or Black)</p6>
+                <button class="add-to-cart" id="add-tocart4">Add to cart<i class="bx bxs-cart"></i>
+                </div>
+
+                <div class="item-card" id="itemz5">
+                    <img src="selfiestick.jpg" id ="image5">
+                    <p1>N24,465</p1>
+                   <p6>XRS Titanium selfie stick with Tripod stand</p6>
+                      <button class="add-to-cart" id="add-tocart5">Add to cart<i class="bx bxs-cart"></i>
+                    </div>
+
+                    <div class="item-card" id="itemz6">
+                        <img src="Airpods.png" id ="image6">
+                        <p1>N10,490</p1>
+                        <p6>i12 airpods 500mah 12hr battery life</p6>
+                        <button class="add-to-cart" id="add-tocart6">Add to cart<i class="bx bxs-cart"></i>
+                        </div>
+                        
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer" id="Footer">
+
+<div class="row-1">
+
+<ul>
+<li><a href="www.facebook.com"></a>Facebook<img src="facebook.png"></li>
+<li><a href="www.instagram.com"></a>Instagram<img src="instagram.png"></li>
+<li><a href="www.telegram.com"></a>Telegram<img src="telegram.png"></li>
+<li><a href="www.youtube.com"></a>Youtube<img src="whatsapp.png"></li>
+<li><a href="www.whatsapp.com"></a>Whatsapp<img src="youtube.png"></li>
+<li><img src="phone-call.png"> +2347065004320</li>
+</ul>
+
+</div>
+
+<div class="row-2">
+<ul>
+
+<li>Terms and conditions</li>
+<li>About Us</li>
+<li>Disclaimers</li>
+<li>Privacy Policy</li>
+
+</div>
+
+<div class="row-3">
+<p4>Subscribe to our newsletter<input type="text" id ="Newsletter" placeholder="example@gmail.com"><i class="bx bx-message"></i></p4>
+
+</div>
+</ul>
+<div class="row-4">
+<p class="foot">Copyright 2025. All rights reserved</p>
+
+</div>
+</div>
+</div>
+
+<script>
+const SearchBtn=document.getElementById("search-btn");
+const SearchBar=document.getElementById("Search-bar");
+const sidebar=document.getElementById("sidebr");
+
+function showSideBar(){
+  sidebar.style.transform="translateX(-10px)"
+} function hideSideBar(){
+  sidebar.style.transform="translateX(300px)"
+}
+
+SearchBtn.addEventListener("click" , function(){
+  if(SearchBtn.classList.contains("bxs-search")){
+    SearchBtn.classList.remove("bxs-search");SearchBtn.classList.add("bx-search");SearchBar.style.width="0px";SearchBar.style.backgroundColor="blueviolet";SearchBar.style.color="purple";SearchBar.style.marginLeft="200px"
+  }else{
+     SearchBtn.classList.remove("bx-search");SearchBtn.classList.add("bxs-search");SearchBar.style.width="400px";SearchBar.style.backgroundColor="white";SearchBar.style.color="black";SearchBar.style.marginLeft="0px"
+  }
+})
+
+const container=document.getElementById("containing");
+const icon=document.getElementById("icons");
+const body=document.querySelector("body");
+const topnav=document.getElementById("topnav");
+const login=document.getElementById("Loginbtn");
+const register=document.getElementById("Registerbtn");
+const footer=document.getElementById("Footer");
+
+const itemcard1=document.getElementById("itemz1")
+const itemcard2=document.getElementById("itemz2");
+const itemcard3=document.getElementById("itemz3");
+const itemcard4=document.getElementById("itemz4");
+const itemcard5=document.getElementById("itemz5");
+const itemcard6=document.getElementById("itemz6");
+
+
+
+const addToCart1=document.getElementById("add-tocart1");
+const addToCart2=document.getElementById("add-tocart2");
+const addToCart3=document.getElementById("add-tocart3");
+const addToCart4=document.getElementById("add-tocart4");
+const addToCart5=document.getElementById("add-tocart5");
+const addToCart6=document.getElementById("add-tocart6");
+
+
+
+container.addEventListener("click" , function(){
+  if(icon.classList.contains("bx-sun")){
+    icon.classList.remove("bx-sun");icon.classList.add("bx-moon");body.style.backgroundColor="black";icon.style.marginLeft="65px";topnav.style.backgroundColor="black";icon.style.Color="black";container.style.backgroundColor="black"; container.style.borderColor="blueviolet";topnav.style.backgroundColor="black"; topnav.style.color="white";footer.style.borderColor="blueviolet"; footer.style.backgroundColor="black" ;
+itemcard1.style.backgroundColor="white";
+itemcard2.style.backgroundColor="white";
+itemcard3.style.backgroundColor="white";
+itemcard4.style.backgroundColor="white";
+itemcard5.style.backgroundColor="white";
+itemcard6.style.backgroundColor="white";
+
+//addToCart1.style.color="white";
+addToCart2.style.color="white";
+//addToCart3.style.color="white";
+addToCart4.style.color="white";
+//addToCart5.style.color="white";
+addToCart6.style.color="white";
+
+//addToCart1.style.backgroundColor="black";
+addToCart2.style.backgroundColor="black";
+//addToCart3.style.backgroundColor="black";
+addToCart4.style.backgroundColor="black";
+//addToCart5.style.backgroundColor="black";
+addToCart6.style.backgroundColor="black";
+
+
+  }else{
+    icon.classList.remove("bx-moon");icon.classList.add("bx-sun");body.style.backgroundColor="white";icon.style.marginLeft="7px";topnav.style.backgroundColor="white";icon.style.Color="blueviolet";container.style.backgroundColor="blueviolet";container.style.borderColor="black"; topnav.style.backgroundColor="white"; topnav.style.color="black";footer.style.borderColor="white"; footer.style.backgroundColor="blueviolet" ;
+
+addToCart1.style.color="black";
+addToCart2.style.color="black";
+addToCart3.style.color="black";
+addToCart4.style.color="black";
+addToCart5.style.color="black";
+addToCart6.style.color="black";
+
+addToCart1.style.backgroundColor="white";
+addToCart2.style.backgroundColor="white";
+addToCart3.style.backgroundColor="white";
+addToCart4.style.backgroundColor="white";
+addToCart5.style.backgroundColor="white";
+addToCart6.style.backgroundColor="white";
+
+
+
+  }
+})
+</script>

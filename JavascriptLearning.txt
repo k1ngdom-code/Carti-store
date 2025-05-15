@@ -1,0 +1,13 @@
+<!Doctype html>
+<html>
+<head>
+
+</head>
+
+</html>
+<body>
+<input type="text"
+ id="textbox">
+<p id="para">This is a demo project on understanding the way javascript works</p>
+
+</body>

@@ -1,0 +1,303 @@
+
+.box1{
+  background: linear-gradient(65deg,  white 40% , blueviolet 30%);
+  box-shadow:1px 1px 6px 1px;
+  border-radius: 10px;
+  max-height:600px;
+  width:1335px;
+  z-index: 1
+}
+h1{
+  font-family:sans seriff;
+  font-size: 150px;
+  position: absolute;
+  transform:translateY(20px)  translateX(30px);
+  color:blueviolet;
+
+}
+#Macbook{
+  transform:scale(0.523) translateX(300px) translateY(-690px)
+}
+p2{
+  transform:translateY(350px)  translateX(30px);
+  position: absolute;
+  font-weight: 600;
+  width:480px;
+  font-size:26px;
+  color:blueviolet;
+}
+.shop{
+  position: absolute;
+  background-color: white;
+  color:blueviolet;
+  padding:10px;
+  border-radius: 10px;
+  width:110px;
+border:2px solid blueviolet;
+  font-size:17px;
+  font-weight:600;
+  font-family:sans-seriff;
+  transition: 0.5s ease;
+  transform:translateX(45px) translateY(450px)
+}
+.shop::before{
+  content:"";
+  position: absolute;
+  inset:0;
+  display:inline-block;
+  background-color:blueviolet;
+  border-radius: 8px;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: -1;
+  transition: transform 0.4s;
+}
+.shop:hover{
+  color:white;
+}
+.shop:hover::before{
+  transform: scaleX(1);
+  transform-origin:left;
+}
+
+h3{
+  color:blueviolet;
+  margin-top:190px ;
+  margin-bottom: 120px;
+  font-size: 50px;
+  margin-left:435px;
+  padding-bottom: 30px;
+  animation:shopping 3s infinite  ease;
+  
+}
+
+//@keyframes shopping{
+  0%{
+    margin-left:0px;
+    opacity: 0
+  }
+  15%{
+    opacity: 0
+  }
+  100%{
+    
+  }
+}
+.box2{
+   box-shadow:1px 1px 6px 1px;
+  border-radius: 10px;
+  max-height:600px;
+  width:1235px;
+  z-index: 1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:300px;
+  transform:translateX(50px);
+  border: 2px solid blueviolet;
+
+}
+#bagcheckmark{
+  //transform:translateX(-250px) translateY(50px) scale(1.05);
+  font-weight: 600;
+  animation: scale 2s linear infinite;
+  position: absolute;
+  margin-top:-10px;
+  margin-left:-24px
+}
+
+@keyframes scale{
+  0%{
+    transform:scale(1)
+  }
+  50%{
+    transform:scale(1.2)
+  }
+}
+p3, p5{
+  color:blueviolet;
+  font-size: 19px;
+}
+
+#two{
+  transform:translateX(25px);
+}
+#two2{
+  transform:translateX(-25px);
+}
+#three{
+  width:350px;
+ transform:translateX(-35px);
+}
+#three2{
+  transform:translateX(35px);
+}
+#check{
+  transform:translateX(-25px);
+}
+
+#four{
+  width:370px;
+  transform:translateX(-155px);
+}
+
+#four2{
+  transform:translateX(275px);
+  width:370px
+}
+.subscribe{
+background-color: white;
+  color:blueviolet;
+  padding:10px;
+  border-radius: 10px;
+  width:110px;
+border:2px solid blueviolet;
+  font-size:17px;
+  font-weight:600;
+  font-family:sans-seriff;
+  transition: 0.5s ease;
+  transform:translateX(115px) translateY(60px)
+}
+.subscribe::before{
+  content:"";
+  position: absolute;
+  inset:0;
+  display:inline-block;
+  background-color:blueviolet;
+  border-radius: 8px;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: -1;
+  transition: transform 0.4s;
+}
+.subscribe:hover{
+  color:white;
+}
+.subscribe:hover::before{
+  transform: scaleX(1);
+  transform-origin:left;
+}
+
+#check{
+  transform:scale(0.95) translateY(-70px);
+  border:2px solid blueviolet;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 5px;
+  animation:checkmark 2s linear infinite;
+}
+
+
+@keyframes checkmark{
+  0%{
+    border:2px solid black
+  }
+  100%{
+    border:2px solid blueviolet
+  }
+}
+
+#shoppingbag{
+  transform:scale(0.95) translateY(-70px);
+  border:2px solid blueviolet;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 5px;
+}
+#notificationbell{
+  border:2px solid blueviolet;
+ margin-top:-70px;
+  z-index: 1;
+  position:absolute;
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 5px;
+  animation: ding;
+   animation-duration:  0.8s;
+  animation-iteration-count: infinite;
+   // animation-play-state: paused;
+  animation-timing-function: ease;
+
+}
+
+//#notificationbell:hover{
+  animation-play-state: running;
+}
+
+.compass{
+  transform:scale(0.95) translateY(-70px);
+  border:2px solid blueviolet;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 5px;
+  padding-right:10px;
+    padding-bottom:10px
+}
+
+@keyframes ding {
+  0%{
+    transform:rotate(45deg)
+  }
+  25%{
+    transform:rotate(-35deg)
+  }
+  50%{
+    transform:rotate(25deg)
+  }
+  75%{
+    transform:rotate(-15deg)
+  }
+  100%{
+ transform:rotate(0deg)
+  }
+}
+
+#BOX2{
+  height: 400px;  
+}
+
+.deals{
+  background-color: white;
+  color:blueviolet;
+  padding:10px;
+  border-radius: 10px;
+  width:120px;
+border:2px solid blueviolet;
+ transform: translateY(-90px) translateX(50px);
+  font-size:17px;
+  font-weight:600;
+  font-family:sans-seriff;
+  transition: 0.5s ease;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.deals::before{
+  content:"";
+  position: absolute;
+  inset:0;
+  display:inline-block;
+  background-color:blueviolet;
+  border-radius: 8px;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: -1;
+  transition: transform 0.4s;
+}
+.deals:hover{
+  color:white;
+}
+.deals:hover::before{
+  transform: scaleX(1);
+  transform-origin:left;
+}
+.deals img{
+  transform:translateX(3px);
+}
+
+
+
+
+
+
+
+
